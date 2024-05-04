@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fibonacciSeries(n) {
+    let fibonacci = [];
+    fibonacci [0] = 0;
+    fibonacci [1] = 1;
+    
+    for (let i = 2; i < n; i++) {
+        fibonacci [i] = fibonacci [i - 1] + fibonacci [i - 2];
+    }
+    
+    return fib;
+}
+function getUserInput() {
+    let input = prompt("Enter the number of terms in the Fibonacci sequence (less than 100):");
+    let num = parseInt(input);
+
+    if (Number.isNaN(num) || num >= 100) {
+        console.log("Invalid input. Please enter a valid integer less than 100.");
+        return getUserInput(); // Ask for input again
+    } else {
+        return num;
+    }
+}
+
+function printFibonacciSeries(n) {
+    const series = fibonacciSeries(n);
+    console.log("Fibonacci Series:");
+    console.log(series.join(", "));
+}
+
+// Main program
+const numOfTerms = getUserInput();
+printFibonacciSeries(numOfTerms);
+
+    </script>
+</body>
+</html>
